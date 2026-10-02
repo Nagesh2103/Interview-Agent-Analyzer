@@ -1,0 +1,5 @@
+What is your experience with data visualization tools, and how do you determine the most effective type of chart to use for a given dataset?
+How would you handle missing or incomplete data in a dataset, and what methods would you use to impute or replace the missing values?
+Can you walk me through your process for analyzing a new dataset, including the steps you take to understand the data, identify trends or patterns, and draw conclusions?
+Suppose you are tasked with analyzing customer purchase behavior, and you have a dataset containing customer demographics, purchase history, and transactional data. How would you approach this analysis, and what insights do you think you could gain from the data?
+Tell me about a time when you had to communicate complex data insights to a non-technical stakeholder. How did you approach the communication, and what strategies did you use to ensure the stakeholder understood the key findings and recommendations?

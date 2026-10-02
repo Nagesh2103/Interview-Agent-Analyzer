@@ -1,0 +1,46 @@
+Interview transcript — Role: Data Analyst
+Timestamp: 2026-07-11T05:30:00+00:00
+Model: claude-sonnet-5
+
+Q1: What is the difference between a primary key and a foreign key in a relational database?
+A: A primary key uniquely identifies each row in a table and cannot be null, while a foreign key is a column that references the primary key of another table to enforce a relationship between the two tables.
+Score: 9/10 — Correct, clear, and covers uniqueness, null constraint, and the relational purpose of a foreign key.
+
+Q2: How would you approach cleaning a messy dataset before starting analysis?
+A: I'd start by checking for duplicate rows, missing values, and inconsistent formatting like mismatched date formats or extra whitespace. I'd also profile the data with summary statistics to spot outliers before doing any analysis.
+Score: 8/10 — Solid, practical checklist; could go further on how to decide whether to impute, drop, or flag missing values.
+
+Q3: Write a SQL approach to find each customer's most recent order from an orders table.
+A: I'd use a window function like ROW_NUMBER() partitioned by the customer id and ordered by order date descending, then filter to rows where the row number equals 1 to get each customer's most recent order.
+Score: 9/10 — Correct and idiomatic approach, demonstrates real SQL fluency rather than a naive self-join or subquery.
+
+Q4: Tell me about a time you noticed a metric or KPI behaving unexpectedly. What did you do?
+A: Once I found a KPI had dropped, I dug into the raw data and found a tracking pixel had broken after a site redesign, which was undercounting conversions rather than reflecting a real business drop. I flagged it to engineering and we backfilled the missing data.
+Score: 8/10 — Good real-world example showing root-cause investigation and cross-team follow-through; a bit more detail on how the drop was first noticed would strengthen it.
+
+Q5: How would you explain the difference between correlation and causation to a non-technical stakeholder?
+A: I'd explain that correlation shows two variables move together but doesn't prove one causes the other, and I'd walk through a concrete example like ice cream sales and drowning rates both rising in summer because of a third factor, temperature.
+Score: 9/10 — Clear, uses a well-chosen concrete example appropriate for a non-technical audience.
+
+==================================================
+FINAL EVALUATION
+==================================================
+Overall score: 8.6/10
+Recommendation: Strong Hire
+Strengths:
+  + Strong SQL fluency, including window functions rather than naive approaches
+  + Communicates technical concepts clearly to non-technical audiences
+  + Practical, systematic approach to data cleaning and quality checks
+  + Demonstrates real root-cause investigation on a past KPI anomaly
+Gaps:
+  - Could go deeper on decision criteria for handling missing data (impute vs. drop vs. flag)
+  - Answers were solid but occasionally brief; more quantified detail (e.g. scale of the KPI drop) would strengthen behavioral answers
+Summary: The candidate showed strong, correct technical fundamentals across SQL and data cleaning, backed by a concrete, well-told example of diagnosing a real KPI issue. Communication was clear and appropriately tailored to a non-technical audience. With slightly more depth on edge-case decision-making, this would be an excellent hire for a Data Analyst role.
+==================================================
+
+Note: This file is a sample output included so reviewers can see the expected
+format without needing an API key. It was generated in the same format the
+script produces, using the answers in sample_answers.txt. To reproduce a
+live version yourself, run:
+
+    python interview_agent.py --role "Data Analyst" --answers-file sample_answers.txt
